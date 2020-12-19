@@ -5,6 +5,7 @@ import java.util.List;
 
 public class EuronetAtm implements AtmApi {
     private List<BankAccount> account = new ArrayList<>();
+    private List<PhoneCard> phoneCards = new ArrayList<>();
 
     public EuronetAtm() {
         this.account.add(new BankAccount("1234", 1000));
@@ -29,5 +30,10 @@ public class EuronetAtm implements AtmApi {
         System.out.println("ekran bankomatu: Not supported account number");
 
         return 0;
+    }
+
+    @Override
+    public void recharge(String accountNumber, PhoneCard toRecharge, int amount) {
+        // todo
     }
 }
