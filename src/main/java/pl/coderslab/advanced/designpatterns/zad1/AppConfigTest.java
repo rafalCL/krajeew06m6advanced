@@ -1,4 +1,4 @@
-package pl.coderslab.advanced.designpatterns;
+package pl.coderslab.advanced.designpatterns.zad1;
 
 public class AppConfigTest {
     private AppConfig appConfig = AppConfig.getInstance();
