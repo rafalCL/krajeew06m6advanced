@@ -6,6 +6,7 @@ package pl.coderslab.advanced.lambda.zad2;
 //        które będzie sprawdzało czy podany parametr jest typu znakowego (String) i jeśli tak,
 //        to wypisze go na ekranie
 
+import java.util.function.Consumer;
 import java.util.function.Predicate;
 
 public class Zad2 {
@@ -22,5 +23,9 @@ public class Zad2 {
             System.out.println(strVal);
         }
 
+        System.out.println("consumer example");
+        Consumer writeIfString = o -> {if(isString.test(o)) System.out.println(o);};
+        writeIfString.accept(intVal);
+        writeIfString.accept(strVal);
     }
 }
