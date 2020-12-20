@@ -26,6 +26,7 @@ public class Zad1 {
         }
 
         inputs.sort((s1, s2) -> s1.compareTo(s2));
+        inputs.sort(String::compareTo); // this will do the same as previous line
 
         System.out.println(inputs.toString());
     }
