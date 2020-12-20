@@ -3,6 +3,7 @@ package pl.coderslab.advanced.stream;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 
 public class Zad1 {
@@ -41,5 +42,18 @@ public class Zad1 {
                 .collect(Collectors.joining(","));
 
         System.out.println(giantString);
+
+        System.out.println("sum of lengths");
+        int sum = Stream.of("a", "bc")
+                .map(s -> s.length())
+                .collect(Collectors.summingInt(Integer::intValue));
+
+        System.out.println(sum);
+
+        int sum2 = Stream.of("a", "bc")
+                .mapToInt(s -> s.length())
+                .sum();
+
+        System.out.println(sum2);
     }
 }
